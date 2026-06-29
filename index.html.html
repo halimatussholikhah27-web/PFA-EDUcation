@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduPFA - Psychological First Aid</title>
+    <style>
+        :root {
+            --primary: #4a90e2;
+            --secondary: #5c6bc0;
+            --dark: #2c3e50;
+            --light: #f8f9fa;
+            --success: #2ecc71;
+            --warning: #e67e22;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        nav {
+            background: white;
+            display: flex;
+            justify-content: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            sticky: top;
+        }
+
+        nav a {
+            color: var(--dark);
+            padding: 15px 20px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--primary);
+            background-color: #f0f4f8;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        section {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        h2 {
+            color: var(--secondary);
+            margin-bottom: 20px;
+            border-bottom: 2px solid #eaeded;
+            padding-bottom: 10px;
+        }
+
+        .pfa-principles {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .card {
+            background: #fdfefe;
+            border-left: 5px solid var(--primary);
+            padding: 20px;
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .card.look { border-left-color: var(--warning); }
+        .card.listen { border-left-color: var(--primary); }
+        .card.link { border-left-color: var(--success); }
+
+        .card h3 {
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+
+        .dos-donts {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .dos-donts { grid-template-columns: 1fr; }
+        }
+
+        .box {
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .do-box { background-color: #e8f8f5; border: 1px solid #a3e4d7; }
+        .dont-box { background-color: #fdedec; border: 1px solid #f5b7b1; }
+
+        .box h4 { margin-bottom: 10px; }
+        .do-box h4 { color: #117a65; }
+        .dont-box h4 { color: #922b21; }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            margin-top: 50px;
+            border-top: 1px solid #e5e7e9;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>EduPFA</h1>
+        <p>Belajar Pertolongan Pertama Psikologis untuk Semua Orang</p>
+    </header>
+
+    <nav>
+        <a href="#apa-itu-pfa">Definisi</a>
+        <a href="#prinsip-pfa">3 Prinsip Utama</a>
+        <a href="#etika-pfa">Do & Don'ts</a>
+    </nav>
+
+    <div class="container">
+
+        <section id="apa-itu-pfa">
+            <h2>Apa itu Psychological First Aid (PFA)?</h2>
+            <p><strong>Psychological First Aid (PFA)</strong> atau Pertolongan Pertama Psikologis adalah serangkaian tindakan humanis dan suportif untuk membantu sesama manusia yang baru saja mengalami krisis, bencana, atau kejadian yang sangat stres mendalam.</p>
+            <br>
+            <p>PFA <strong>bukanlah</strong> sesi konseling profesional, bukan terapi, dan Anda tidak harus menjadi psikolog untuk melakukannya. PFA mirip dengan P3K medis, namun berfokus pada kesehatan mental dan emosional seseorang.</p>
+        </section>
+
+        <section id="prinsip-pfa">
+            <h2>3 Prinsip Utama PFA (WHO)</h2>
+            <p>Saat memberikan bantuan, ingat selalu tiga langkah mendasar ini:</p>
+            
+            <div class="pfa-principles">
+                <div class="card look">
+                    <h3>1. LOOK (Amati)</h3>
+                    <p>Periksa keamanan situasi sekitar. Amati orang-orang yang terlihat mengalami reaksi stres berat dan membutuhkan bantuan mendasar mendesak.</p>
+                </div>
+                <div class="card listen">
+                    <h3>2. LISTEN (Dengar)</h3>
+                    <p>Dekati orang yang membutuhkan. Dengarkan keluh kesah mereka tanpa memaksa mereka bercerita. Bantu mereka untuk merasa tenang.</p>
+                </div>
+                <div class="card link">
+                    <h3>3. LINK (Hubungkan)</h3>
+                    <p>Bantu mereka mengakses kebutuhan dasar (air, makanan, keamanan). Hubungkan mereka dengan keluarga atau layanan profesional jika dibutuhkan.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="etika-pfa">
+            <h2>Etika & Komunikasi dalam PFA</h2>
+            <p style="margin-bottom: 20px;">Cara kita merespons sangat menentukan kenyamanan orang yang sedang mengalami krisis. Berikut panduannya:</p>
+
+            <div class="dos-donts">
+                <div class="box do-box">
+                    <h4> JANGAN RAGU UNTUK (DO):</h4>
+                    <ul>
+                        <li>Menjadi pendengar yang sabar dan penuh perhatian.</li>
+                        <li>Menghargai privasi dan cerita mereka.</li>
+                        <li>Mengakui perasaan mereka ("Saya paham situasi ini sangat sulit bagi Anda").</li>
+                        <li>Fokus pada kenyamanan fisik dan keamanan mereka saat itu.</li>
+                    </ul>
+                </div>
+                <div class="box dont-box">
+                    <h4> HINDARI HAL INI (DON'T):</h4>
+                    <ul>
+                        <li>Memaksa mereka menceritakan kronologi kejadian secara detail.</li>
+                        <li>Memotong pembicaraan atau menceritakan masalah Anda sendiri.</li>
+                        <li>Memberikan janji palsu ("Semua akan baik-baik saja besok").</li>
+                        <li>Menghakimi tingkah laku atau reaksi emosional mereka.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 EduPFA - Aplikasi Edukasi Kesehatan Mental. Dibuat untuk tujuan kemanusiaan.</p>
+    </footer>
+
+</body>
+</html>
